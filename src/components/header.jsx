@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import coatOfArms from "../assets/images/coat-of-arms.svg";
 
 class Header extends Component {
   state = {};
@@ -6,7 +7,7 @@ class Header extends Component {
     return (
       <React.Fragment>
         <header>
-          <h1>aaaaa</h1>
+          <img id="coat-of-arms" src={coatOfArms} alt="Polish coat of arms" srcset="" />
         </header>
       </React.Fragment>
     );
