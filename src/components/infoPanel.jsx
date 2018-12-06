@@ -5,11 +5,7 @@ class InfoPanel extends Component {
   render() {
     return (
       <React.Fragment>
-        <p>aaaaaaaaaaaaaaaa</p>
-        <p>aaaaaaaaaaaaaaaa</p>
-        <p>aaaaaaaaaaaaaaaa</p>
-        <p>aaaaaaaaaaaaaaaa</p>
-        <p>aaaaaaaaaaaaaaaa</p>
+        <p>{this.props.currentTime}</p>
       </React.Fragment>
     );
   }

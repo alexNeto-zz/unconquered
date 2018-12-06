@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import YouTube from "react-youtube";
 
 class VideoPlayer extends Component {
-  state = {};
   render() {
     return (
       <React.Fragment>
@@ -11,15 +10,13 @@ class VideoPlayer extends Component {
     );
   }
 
-  onReady(event) {
-    console.log(event);
-    setInterval(() => console.log(event.target.getCurrentTime()), 1000);
+  onReady = event => {
+    setInterval(
+      () => this.props.updateCurrentTime(event.target.getCurrentTime()),
+      250
+    );
     // event.target.pauseVideo();
-  }
-
-  rateChange(aaaaaaaaaa) {
-    console.log(aaaaaaaaaa);
-  }
+  };
 }
 
 export default VideoPlayer;
