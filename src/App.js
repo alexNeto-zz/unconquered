@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import InfoPanel from "./components/infoPanel";
 import VideoPlayer from "./components/videoPlayer";
 
+import { references } from "./references.json";
+
 class App extends Component {
   state = {
     currentTime: 0
@@ -19,7 +21,7 @@ class App extends Component {
             <VideoPlayer updateCurrentTime={this.updateCurrentTime} />
           </div>
           <div className="info-panel">
-            <InfoPanel items={[{href:"", title: "algo"},{href:"", title: "algo"}]} currentTime={this.state.currentTime} />
+            <InfoPanel items={references} currentTime={this.state.currentTime} />
           </div>
         </div>
       </React.Fragment>

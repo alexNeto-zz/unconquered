@@ -5,8 +5,8 @@ class InfoPanel extends Component {
   render() {
     return (
       <React.Fragment>
-        {this.props.items.map(item => (
-          <InfoItem href={item.href} title={item.title} />
+        {this.props.items.map((item, key) => (
+          <InfoItem href={item.href} title={item.title} key={key} />
         ))}
       </React.Fragment>
     );
