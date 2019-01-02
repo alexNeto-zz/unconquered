@@ -6,7 +6,8 @@ import { references } from "./references.json";
 
 class App extends Component {
   state = {
-    currentTime: 0
+    currentTime: 0,
+    references: []
   };
 
   componentDidMount() {
@@ -21,7 +22,10 @@ class App extends Component {
             <VideoPlayer updateCurrentTime={this.updateCurrentTime} />
           </div>
           <div className="info-panel">
-            <InfoPanel items={references} currentTime={this.state.currentTime} />
+            <InfoPanel
+              items={this.state.references}
+              currentTime={this.state.currentTime}
+            />
           </div>
         </div>
       </React.Fragment>
@@ -30,7 +34,14 @@ class App extends Component {
 
   updateCurrentTime = currentTime => {
     this.setState({ currentTime });
+    this.setState({ references: this.getCurrentReferences() });
   };
+
+  getCurrentReferences() {
+    return references
+      .filter(reference => reference.time <= this.state.currentTime)
+      .sort((current, next) => current.time - next.time);
+  }
 }
 
 export default App;
