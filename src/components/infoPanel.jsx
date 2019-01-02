@@ -1,11 +1,13 @@
 import React, { Component } from "react";
+import InfoItem from "./infoItem";
 
 class InfoPanel extends Component {
-  state = {};
   render() {
     return (
       <React.Fragment>
-        <p>{this.props.currentTime}</p>
+        {this.props.items.map(item => (
+          <InfoItem href={item.href} title={item.title} />
+        ))}
       </React.Fragment>
     );
   }

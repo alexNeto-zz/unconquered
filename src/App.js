@@ -19,7 +19,7 @@ class App extends Component {
             <VideoPlayer updateCurrentTime={this.updateCurrentTime} />
           </div>
           <div className="info-panel">
-            <InfoPanel currentTime={this.state.currentTime} />
+            <InfoPanel items={[{href:"", title: "algo"},{href:"", title: "algo"}]} currentTime={this.state.currentTime} />
           </div>
         </div>
       </React.Fragment>
