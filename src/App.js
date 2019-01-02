@@ -34,12 +34,18 @@ class App extends Component {
 
   updateCurrentTime = currentTime => {
     this.setState({ currentTime });
-    this.setState({ references: this.getCurrentReferences() });
+    if (this.needToUpdateReferences()) {
+      this.setState({ references: this.getCurrentReferences() });
+    }
   };
+
+  needToUpdateReferences() {
+    return this.state.references.length !== this.getCurrentReferences().length;
+  }
 
   getCurrentReferences() {
     return references
-      .filter(reference => reference.time <= this.state.currentTime)
+      .filter(reference => reference.time < this.state.currentTime)
       .sort((current, next) => current.time - next.time);
   }
 }

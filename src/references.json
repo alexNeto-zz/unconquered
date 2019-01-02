@@ -1,43 +1,7 @@
 {
     "references": [{
-        "time": 1.1,
-        "href": "second",
-        "title": "second"
-    }, {
-        "time": 2.2,
-        "href": "algo",
-        "title": "third"
-    }, {
-        "time": 3.3,
-        "href": "algo",
-        "title": "algo"
-    }, {
-        "time": 4.4,
-        "href": "algo",
-        "title": "algo"
-    }, {
-        "time": 5.5,
-        "href": "algo",
-        "title": "algo"
-    }, {
-        "time": 6.6,
-        "href": "algo",
-        "title": "algo"
-    }, {
-        "time": 7.7,
-        "href": "algo",
-        "title": "algo"
-    }, {
-        "time": 8.8,
-        "href": "algo",
-        "title": "algo"
-    }, {
-        "time": 9.9,
-        "href": "algo",
-        "title": "algo"
-    }, {
-        "time": 1.0,
-        "href": "first",
-        "title": "first"
+        "time": 2,
+        "href": "https://en.wikipedia.org/wiki/Molotov%E2%80%93Ribbentrop_Pact",
+        "title": "Molotov–Ribbentrop Pact"
     }]
 }

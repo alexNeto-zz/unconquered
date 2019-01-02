@@ -49,15 +49,26 @@ article {
   border-width: 1px;
   border-color: var(--gray_1);
   border-radius: 3%;
-  padding: 10px; 
+  padding: 10px;
 }
 
 a {
   text-decoration: none;
   margin: 0.5%;
-  
 }
 
 article>h2 {
-  color: var(--gray_2)
+  color: var(--gray_2);
+}
+
+a:visited>article>h2 {
+  color: var(--gray_1);
+}
+
+a:hover>article {
+  border-color: var(--red);
+}
+
+a:hover>article>h2 {
+  color: var(--red);
 }
